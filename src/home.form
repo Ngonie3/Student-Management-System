@@ -225,14 +225,14 @@
         <Component class="javax.swing.JLabel" name="jLabel2">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\ngoni\Downloads\SRS-logo.png"/>
+              <Image iconType="2" name="C:\Users\ngoni\OneDrive\Documents\Downloads\Student\src\png files\home-logo.png"/>
             </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="showStudents">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\ngoni\Downloads\student_Group-icon.png"/>
+              <Image iconType="2" name="C:\Users\ngoni\OneDrive\Documents\Downloads\Student\src\png files\student_Group-icon.png"/>
             </Property>
           </Properties>
           <Events>
@@ -275,7 +275,7 @@
         <Component class="javax.swing.JButton" name="addAdmin">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\ngoni\Downloads\Admin-icon.png"/>
+              <Image iconType="2" name="C:\Users\ngoni\OneDrive\Documents\Downloads\Student\src\png files\Admin-icon.png"/>
             </Property>
           </Properties>
           <Events>
@@ -285,7 +285,7 @@
         <Component class="javax.swing.JButton" name="adminSettings">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\ngoni\Downloads\admin_settings-icon.png"/>
+              <Image iconType="2" name="C:\Users\ngoni\OneDrive\Documents\Downloads\Student\src\png files\admin_settings-icon.png"/>
             </Property>
           </Properties>
           <Events>
@@ -295,7 +295,7 @@
         <Component class="javax.swing.JButton" name="showAdmins">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\ngoni\Downloads\group_of_admins.png"/>
+              <Image iconType="2" name="C:\Users\ngoni\OneDrive\Documents\Downloads\Student\src\png files\group_of_admins.png"/>
             </Property>
           </Properties>
           <Events>
@@ -338,7 +338,7 @@
         <Component class="javax.swing.JButton" name="addStudents">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\ngoni\Downloads\add-student-icon.png"/>
+              <Image iconType="2" name="C:\Users\ngoni\OneDrive\Documents\Downloads\Student\src\png files\add-student-icon.png"/>
             </Property>
           </Properties>
           <Events>
@@ -348,7 +348,7 @@
         <Component class="javax.swing.JButton" name="studentSettings">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\ngoni\Downloads\Student_Settings-icon.png"/>
+              <Image iconType="2" name="C:\Users\ngoni\OneDrive\Documents\Downloads\Student\src\png files\Student_Settings-icon.png"/>
             </Property>
           </Properties>
           <Events>

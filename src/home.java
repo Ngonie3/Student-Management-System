@@ -61,9 +61,9 @@ public class home extends javax.swing.JFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED), "Home", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 1, 24), new java.awt.Color(0, 153, 204))); // NOI18N
         jPanel1.setForeground(new java.awt.Color(255, 255, 255));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\ngoni\\Downloads\\SRS-logo.png")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\ngoni\\OneDrive\\Documents\\Downloads\\Student\\src\\png files\\home-logo.png")); // NOI18N
 
-        showStudents.setIcon(new javax.swing.ImageIcon("C:\\Users\\ngoni\\Downloads\\student_Group-icon.png")); // NOI18N
+        showStudents.setIcon(new javax.swing.ImageIcon("C:\\Users\\ngoni\\OneDrive\\Documents\\Downloads\\Student\\src\\png files\\student_Group-icon.png")); // NOI18N
         showStudents.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 showStudentsActionPerformed(evt);
@@ -82,21 +82,21 @@ public class home extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(0, 153, 204));
         jLabel4.setText("Show Students");
 
-        addAdmin.setIcon(new javax.swing.ImageIcon("C:\\Users\\ngoni\\Downloads\\Admin-icon.png")); // NOI18N
+        addAdmin.setIcon(new javax.swing.ImageIcon("C:\\Users\\ngoni\\OneDrive\\Documents\\Downloads\\Student\\src\\png files\\Admin-icon.png")); // NOI18N
         addAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addAdminActionPerformed(evt);
             }
         });
 
-        adminSettings.setIcon(new javax.swing.ImageIcon("C:\\Users\\ngoni\\Downloads\\admin_settings-icon.png")); // NOI18N
+        adminSettings.setIcon(new javax.swing.ImageIcon("C:\\Users\\ngoni\\OneDrive\\Documents\\Downloads\\Student\\src\\png files\\admin_settings-icon.png")); // NOI18N
         adminSettings.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 adminSettingsActionPerformed(evt);
             }
         });
 
-        showAdmins.setIcon(new javax.swing.ImageIcon("C:\\Users\\ngoni\\Downloads\\group_of_admins.png")); // NOI18N
+        showAdmins.setIcon(new javax.swing.ImageIcon("C:\\Users\\ngoni\\OneDrive\\Documents\\Downloads\\Student\\src\\png files\\group_of_admins.png")); // NOI18N
         showAdmins.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 showAdminsActionPerformed(evt);
@@ -115,14 +115,14 @@ public class home extends javax.swing.JFrame {
         jLabel7.setForeground(new java.awt.Color(0, 153, 204));
         jLabel7.setText("Show Admins");
 
-        addStudents.setIcon(new javax.swing.ImageIcon("C:\\Users\\ngoni\\Downloads\\add-student-icon.png")); // NOI18N
+        addStudents.setIcon(new javax.swing.ImageIcon("C:\\Users\\ngoni\\OneDrive\\Documents\\Downloads\\Student\\src\\png files\\add-student-icon.png")); // NOI18N
         addStudents.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addStudentsActionPerformed(evt);
             }
         });
 
-        studentSettings.setIcon(new javax.swing.ImageIcon("C:\\Users\\ngoni\\Downloads\\Student_Settings-icon.png")); // NOI18N
+        studentSettings.setIcon(new javax.swing.ImageIcon("C:\\Users\\ngoni\\OneDrive\\Documents\\Downloads\\Student\\src\\png files\\Student_Settings-icon.png")); // NOI18N
         studentSettings.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 studentSettingsActionPerformed(evt);

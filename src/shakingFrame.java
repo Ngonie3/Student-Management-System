@@ -110,7 +110,7 @@ public class shakingFrame extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 0, 0));
         jLabel1.setText("Username or Password is incorrect !");
 
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\ngoni\\Downloads\\login-hiba.png")); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\ngoni\\OneDrive\\Documents\\Downloads\\Student\\src\\png files\\login-hiba.png")); // NOI18N
 
         tryAgain.setBackground(new java.awt.Color(0, 0, 0));
         tryAgain.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
