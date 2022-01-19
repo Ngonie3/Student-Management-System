@@ -18,7 +18,7 @@ public class dataBaseConnection {
     final static String DB_URL = "jdbc:mysql://localhost:3306/student";
     
     final static String USER = "root";
-    final static String PASS = "FyaHmahdKinG!3";
+    final static String PASS = "p@55w0rd!";
     
     public static Connection connection(){
         
