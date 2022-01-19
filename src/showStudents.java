@@ -58,8 +58,8 @@ public class showStudents extends javax.swing.JFrame {
         showStudentBack = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        showStudentsHome = new javax.swing.JMenuItem();
-        showStudentsLogout = new javax.swing.JMenuItem();
+        homeMenuItem = new javax.swing.JMenuItem();
+        logoutMenuItem = new javax.swing.JMenuItem();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -125,7 +125,7 @@ public class showStudents extends javax.swing.JFrame {
 
         showStudentBack.setBackground(new java.awt.Color(0, 0, 0));
         showStudentBack.setForeground(new java.awt.Color(0, 153, 204));
-        showStudentBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/back.png"))); // NOI18N
+        showStudentBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/png files/back.png"))); // NOI18N
         showStudentBack.setText("Back");
         showStudentBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -149,30 +149,30 @@ public class showStudents extends javax.swing.JFrame {
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 415, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(showStudentBack)
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
 
-        jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/home.png"))); // NOI18N
+        jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/png files/home.png"))); // NOI18N
 
-        showStudentsHome.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_H, java.awt.event.InputEvent.CTRL_DOWN_MASK));
-        showStudentsHome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/home.png"))); // NOI18N
-        showStudentsHome.setText("Home");
-        showStudentsHome.addActionListener(new java.awt.event.ActionListener() {
+        homeMenuItem.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_H, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        homeMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/png files/home.png"))); // NOI18N
+        homeMenuItem.setText("Home");
+        homeMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                showStudentsHomeActionPerformed(evt);
+                homeMenuItemActionPerformed(evt);
             }
         });
-        jMenu1.add(showStudentsHome);
+        jMenu1.add(homeMenuItem);
 
-        showStudentsLogout.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_X, java.awt.event.InputEvent.CTRL_DOWN_MASK));
-        showStudentsLogout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logout.png"))); // NOI18N
-        showStudentsLogout.setText("Logout");
-        showStudentsLogout.addActionListener(new java.awt.event.ActionListener() {
+        logoutMenuItem.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_X, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        logoutMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/png files/logout.png"))); // NOI18N
+        logoutMenuItem.setText("Logout");
+        logoutMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                showStudentsLogoutActionPerformed(evt);
+                logoutMenuItemActionPerformed(evt);
             }
         });
-        jMenu1.add(showStudentsLogout);
+        jMenu1.add(logoutMenuItem);
 
         jMenuBar1.add(jMenu1);
 
@@ -186,26 +186,14 @@ public class showStudents extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         setSize(new java.awt.Dimension(863, 579));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void showStudentsHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showStudentsHomeActionPerformed
-        // TODO add your handling code here:
-        setVisible(false);
-        home obj = new home();
-        obj.setVisible(true);
-    }//GEN-LAST:event_showStudentsHomeActionPerformed
-
-    private void showStudentsLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showStudentsLogoutActionPerformed
-        // TODO add your handling code here:
-        setVisible(false);
-        login obj = new login();
-        obj.setVisible(true);
-    }//GEN-LAST:event_showStudentsLogoutActionPerformed
 
     private void showStudentBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showStudentBackActionPerformed
         // TODO add your handling code here:
@@ -213,6 +201,21 @@ public class showStudents extends javax.swing.JFrame {
         home obj = new home();
         obj.setVisible(true);
     }//GEN-LAST:event_showStudentBackActionPerformed
+
+    private void homeMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeMenuItemActionPerformed
+        // TODO add your handling code here:
+        setVisible(false);
+        home obj = new home();
+        obj.setVisible(true);
+    }//GEN-LAST:event_homeMenuItemActionPerformed
+
+    private void logoutMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutMenuItemActionPerformed
+        // TODO add your handling code here:
+        setVisible(false);
+        login obj = new login();
+        obj.setVisible(true);
+
+    }//GEN-LAST:event_logoutMenuItemActionPerformed
 
     /**
      * @param args the command line arguments
@@ -251,14 +254,14 @@ public class showStudents extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable dataTable;
+    private javax.swing.JMenuItem homeMenuItem;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
+    private javax.swing.JMenuItem logoutMenuItem;
     private javax.swing.JButton showStudentBack;
-    private javax.swing.JMenuItem showStudentsHome;
-    private javax.swing.JMenuItem showStudentsLogout;
     // End of variables declaration//GEN-END:variables
 }

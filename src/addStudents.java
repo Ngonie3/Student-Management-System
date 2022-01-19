@@ -101,7 +101,7 @@ public class addStudents extends javax.swing.JFrame {
         submit.setBackground(new java.awt.Color(0, 0, 0));
         submit.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         submit.setForeground(new java.awt.Color(0, 153, 204));
-        submit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/submit.png"))); // NOI18N
+        submit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/png files/submit.png"))); // NOI18N
         submit.setText("Submit");
         submit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -112,7 +112,7 @@ public class addStudents extends javax.swing.JFrame {
         addStudentBack.setBackground(new java.awt.Color(0, 0, 0));
         addStudentBack.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         addStudentBack.setForeground(new java.awt.Color(0, 153, 204));
-        addStudentBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/back.png"))); // NOI18N
+        addStudentBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/png files/back.png"))); // NOI18N
         addStudentBack.setText("Back");
         addStudentBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -172,11 +172,11 @@ public class addStudents extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(age, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(51, 51, 51)
+                                .addGap(62, 62, 62)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel2)
                                     .addComponent(mothersName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(phoneNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel3))
@@ -189,17 +189,14 @@ public class addStudents extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
                     .addComponent(course, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(submit)
                     .addComponent(addStudentBack))
                 .addGap(21, 21, 21))
         );
 
-        jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/home.png"))); // NOI18N
-
         addStudentsHome.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_H, java.awt.event.InputEvent.CTRL_DOWN_MASK));
-        addStudentsHome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/home.png"))); // NOI18N
         addStudentsHome.setText("Home");
         addStudentsHome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -209,7 +206,6 @@ public class addStudents extends javax.swing.JFrame {
         jMenu1.add(addStudentsHome);
 
         addStudentsLogout.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_X, java.awt.event.InputEvent.CTRL_DOWN_MASK));
-        addStudentsLogout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logout.png"))); // NOI18N
         addStudentsLogout.setText("Logout");
         addStudentsLogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

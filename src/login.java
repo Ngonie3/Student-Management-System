@@ -171,13 +171,6 @@ public class login extends javax.swing.JFrame {
 
         // TODO add your handling code here:
         try {
-            ActionListener listen = new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    //To change body of generated methods, choose Tools | Templates.
-                }
-            };
-
             stmt = conn.createStatement();
             String userName = nameField.getText();
             String password = passwordField.getText();
@@ -187,8 +180,8 @@ public class login extends javax.swing.JFrame {
             rs = stmt.executeQuery(sql);
             if (rs.next()) {
                 setVisible(false);
-                home homeObj = new home();
-                homeObj.setVisible(true);
+                home obj = new home();
+                obj.setVisible(true);
             } else {
 
                 //JOptionPane.showMessageDialog(null,"username or password is incorrect");
@@ -229,8 +222,8 @@ public class login extends javax.swing.JFrame {
                 rs = stmt.executeQuery(sql);
                 if (rs.next()) {
                     setVisible(false);
-                    home homeObj = new home();
-                    homeObj.setVisible(true);
+                    home obj = new home();
+                    obj.setVisible(true);
                 } else {
 
                     //JOptionPane.showMessageDialog(null,"username or password is incorrect");

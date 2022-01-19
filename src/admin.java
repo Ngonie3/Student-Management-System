@@ -82,7 +82,7 @@ public class admin extends javax.swing.JFrame {
         adminUpdate.setBackground(new java.awt.Color(0, 0, 0));
         adminUpdate.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         adminUpdate.setForeground(new java.awt.Color(0, 153, 204));
-        adminUpdate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/submit.png"))); // NOI18N
+        adminUpdate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/png files/submit.png"))); // NOI18N
         adminUpdate.setText("Update");
         adminUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -93,7 +93,7 @@ public class admin extends javax.swing.JFrame {
         adminBack.setBackground(new java.awt.Color(0, 0, 0));
         adminBack.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         adminBack.setForeground(new java.awt.Color(0, 153, 204));
-        adminBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/back.png"))); // NOI18N
+        adminBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/png files/back.png"))); // NOI18N
         adminBack.setText("Back");
         adminBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -104,7 +104,7 @@ public class admin extends javax.swing.JFrame {
         adminSearch.setBackground(new java.awt.Color(0, 0, 0));
         adminSearch.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         adminSearch.setForeground(new java.awt.Color(0, 153, 204));
-        adminSearch.setIcon(new javax.swing.ImageIcon("C:\\Users\\ngoni\\OneDrive\\Documents\\Downloads\\Student\\src\\loupe.png")); // NOI18N
+        adminSearch.setIcon(new javax.swing.ImageIcon(getClass().getResource("/png files/loupe.png"))); // NOI18N
         adminSearch.setText("Search");
         adminSearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -115,7 +115,7 @@ public class admin extends javax.swing.JFrame {
         adminDelete.setBackground(new java.awt.Color(0, 0, 0));
         adminDelete.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         adminDelete.setForeground(new java.awt.Color(0, 153, 204));
-        adminDelete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cancel1.png"))); // NOI18N
+        adminDelete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/png files/cancel1.png"))); // NOI18N
         adminDelete.setText("Delete");
         adminDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -195,10 +195,10 @@ public class admin extends javax.swing.JFrame {
                 .addGap(32, 32, 32))
         );
 
-        jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/home.png"))); // NOI18N
+        jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/png files/home.png"))); // NOI18N
 
         homeMenuItem.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_H, java.awt.event.InputEvent.CTRL_DOWN_MASK));
-        homeMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/home.png"))); // NOI18N
+        homeMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/png files/home.png"))); // NOI18N
         homeMenuItem.setText("Home");
         homeMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -208,7 +208,7 @@ public class admin extends javax.swing.JFrame {
         jMenu1.add(homeMenuItem);
 
         logoutMenuItem.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_X, java.awt.event.InputEvent.CTRL_DOWN_MASK));
-        logoutMenuItem.setIcon(new javax.swing.ImageIcon("C:\\Users\\ngoni\\Downloads\\project Image\\project Image\\logout.png")); // NOI18N
+        logoutMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/png files/logout.png"))); // NOI18N
         logoutMenuItem.setText("Logout");
         logoutMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -225,30 +225,18 @@ public class admin extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         setSize(new java.awt.Dimension(528, 479));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void homeMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeMenuItemActionPerformed
-        // TODO add your handling code here:
-        setVisible(false);
-        home obj = new home();
-        obj.setVisible(true);
-    }//GEN-LAST:event_homeMenuItemActionPerformed
-
-    private void logoutMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutMenuItemActionPerformed
-        // TODO add your handling code here:
-        setVisible(false);
-        login obj = new login();
-        obj.setVisible(true);
-    }//GEN-LAST:event_logoutMenuItemActionPerformed
 
     private void adminNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminNameActionPerformed
         // TODO add your handling code here:
@@ -340,6 +328,21 @@ public class admin extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, e);
         }
     }//GEN-LAST:event_adminDeleteActionPerformed
+
+    private void homeMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeMenuItemActionPerformed
+        // TODO add your handling code here:
+        setVisible(false);
+        home obj = new home();
+        obj.setVisible(true);
+    }//GEN-LAST:event_homeMenuItemActionPerformed
+
+    private void logoutMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutMenuItemActionPerformed
+        // TODO add your handling code here:
+        setVisible(false);
+        login obj = new login();
+        obj.setVisible(true);
+
+    }//GEN-LAST:event_logoutMenuItemActionPerformed
 
     /**
      * @param args the command line arguments

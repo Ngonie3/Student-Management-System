@@ -50,8 +50,8 @@ public class showAdmin extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        showAdminHome = new javax.swing.JMenuItem();
-        showAdminLogout = new javax.swing.JMenuItem();
+        homeMenuItem = new javax.swing.JMenuItem();
+        logoutMenuItem = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
@@ -76,7 +76,7 @@ public class showAdmin extends javax.swing.JFrame {
         jButton1.setBackground(new java.awt.Color(0, 0, 0));
         jButton1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(0, 153, 204));
-        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\ngoni\\OneDrive\\Documents\\Downloads\\Student\\src\\back.png")); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/png files/back.png"))); // NOI18N
         jButton1.setText("Back");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -101,30 +101,30 @@ public class showAdmin extends javax.swing.JFrame {
                 .addComponent(showAdminBack, javax.swing.GroupLayout.PREFERRED_SIZE, 379, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButton1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(14, Short.MAX_VALUE))
         );
 
-        jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/home.png"))); // NOI18N
+        jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/png files/home.png"))); // NOI18N
 
-        showAdminHome.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_H, java.awt.event.InputEvent.CTRL_DOWN_MASK));
-        showAdminHome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/home.png"))); // NOI18N
-        showAdminHome.setText("Home");
-        showAdminHome.addActionListener(new java.awt.event.ActionListener() {
+        homeMenuItem.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_H, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        homeMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/png files/home.png"))); // NOI18N
+        homeMenuItem.setText("Home");
+        homeMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                showAdminHomeActionPerformed(evt);
+                homeMenuItemActionPerformed(evt);
             }
         });
-        jMenu1.add(showAdminHome);
+        jMenu1.add(homeMenuItem);
 
-        showAdminLogout.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_X, java.awt.event.InputEvent.CTRL_DOWN_MASK));
-        showAdminLogout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logout.png"))); // NOI18N
-        showAdminLogout.setText("Logout");
-        showAdminLogout.addActionListener(new java.awt.event.ActionListener() {
+        logoutMenuItem.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_X, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        logoutMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/png files/logout.png"))); // NOI18N
+        logoutMenuItem.setText("Logout");
+        logoutMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                showAdminLogoutActionPerformed(evt);
+                logoutMenuItemActionPerformed(evt);
             }
         });
-        jMenu1.add(showAdminLogout);
+        jMenu1.add(logoutMenuItem);
 
         jMenuBar1.add(jMenu1);
 
@@ -138,28 +138,14 @@ public class showAdmin extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(0, 0, 0)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 1, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         setSize(new java.awt.Dimension(524, 569));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void showAdminHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showAdminHomeActionPerformed
-        // TODO add your handling code here:
-        setVisible(false);
-        home obj = new home();
-        obj.setVisible(true);
-    }//GEN-LAST:event_showAdminHomeActionPerformed
-
-    private void showAdminLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showAdminLogoutActionPerformed
-        // TODO add your handling code here:
-        setVisible(false);
-        login obj = new login();
-        obj.setVisible(true);
-    }//GEN-LAST:event_showAdminLogoutActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
@@ -167,6 +153,21 @@ public class showAdmin extends javax.swing.JFrame {
         home obj = new home();
         obj.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void homeMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeMenuItemActionPerformed
+        // TODO add your handling code here:
+        setVisible(false);
+        home obj = new home();
+        obj.setVisible(true);
+    }//GEN-LAST:event_homeMenuItemActionPerformed
+
+    private void logoutMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutMenuItemActionPerformed
+        // TODO add your handling code here:
+        setVisible(false);
+        login obj = new login();
+        obj.setVisible(true);
+
+    }//GEN-LAST:event_logoutMenuItemActionPerformed
 
     /**
      * @param args the command line arguments
@@ -204,13 +205,13 @@ public class showAdmin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem homeMenuItem;
     private javax.swing.JButton jButton1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JMenuItem logoutMenuItem;
     private javax.swing.JScrollPane showAdminBack;
-    private javax.swing.JMenuItem showAdminHome;
-    private javax.swing.JMenuItem showAdminLogout;
     private javax.swing.JTable showAdminTable;
     // End of variables declaration//GEN-END:variables
 
