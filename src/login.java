@@ -62,6 +62,11 @@ public class login extends javax.swing.JFrame {
         password.setForeground(new java.awt.Color(0, 153, 204));
         password.setText("Password");
 
+        passwordField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                passwordFieldActionPerformed(evt);
+            }
+        });
         passwordField.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 passwordFieldKeyPressed(evt);
@@ -236,6 +241,10 @@ public class login extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_passwordFieldKeyPressed
+
+    private void passwordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_passwordFieldActionPerformed
 
     /**
      * @param args the command line arguments

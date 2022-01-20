@@ -55,8 +55,8 @@ public class addStudents extends javax.swing.JFrame {
         addStudentBack = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        addStudentsHome = new javax.swing.JMenuItem();
-        addStudentsLogout = new javax.swing.JMenuItem();
+        homeMenuItem = new javax.swing.JMenuItem();
+        logoutMenuItem = new javax.swing.JMenuItem();
 
         jTextField2.setText("jTextField2");
 
@@ -176,7 +176,7 @@ public class addStudents extends javax.swing.JFrame {
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel2)
                                     .addComponent(mothersName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(phoneNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel3))
@@ -189,30 +189,34 @@ public class addStudents extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
                     .addComponent(course, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(submit)
                     .addComponent(addStudentBack))
                 .addGap(21, 21, 21))
         );
 
-        addStudentsHome.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_H, java.awt.event.InputEvent.CTRL_DOWN_MASK));
-        addStudentsHome.setText("Home");
-        addStudentsHome.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addStudentsHomeActionPerformed(evt);
-            }
-        });
-        jMenu1.add(addStudentsHome);
+        jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/png files/home.png"))); // NOI18N
 
-        addStudentsLogout.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_X, java.awt.event.InputEvent.CTRL_DOWN_MASK));
-        addStudentsLogout.setText("Logout");
-        addStudentsLogout.addActionListener(new java.awt.event.ActionListener() {
+        homeMenuItem.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_H, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        homeMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/png files/home.png"))); // NOI18N
+        homeMenuItem.setText("Home");
+        homeMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addStudentsLogoutActionPerformed(evt);
+                homeMenuItemActionPerformed(evt);
             }
         });
-        jMenu1.add(addStudentsLogout);
+        jMenu1.add(homeMenuItem);
+
+        logoutMenuItem.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_X, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        logoutMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/png files/logout.png"))); // NOI18N
+        logoutMenuItem.setText("Logout");
+        logoutMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                logoutMenuItemActionPerformed(evt);
+            }
+        });
+        jMenu1.add(logoutMenuItem);
 
         jMenuBar1.add(jMenu1);
 
@@ -226,7 +230,7 @@ public class addStudents extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         setSize(new java.awt.Dimension(445, 655));
@@ -259,13 +263,6 @@ public class addStudents extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, e);
         }
     }//GEN-LAST:event_submitActionPerformed
-
-    private void addStudentsLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addStudentsLogoutActionPerformed
-        // TODO add your handling code here:
-        setVisible(false);
-        login obj = new login();
-        obj.setVisible(true);
-    }//GEN-LAST:event_addStudentsLogoutActionPerformed
     
     private void clearStudent(){
         name.setText(null);
@@ -283,12 +280,19 @@ public class addStudents extends javax.swing.JFrame {
         obj.setVisible(true);
     }//GEN-LAST:event_addStudentBackActionPerformed
 
-    private void addStudentsHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addStudentsHomeActionPerformed
+    private void homeMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeMenuItemActionPerformed
         // TODO add your handling code here:
         setVisible(false);
         home obj = new home();
         obj.setVisible(true);
-    }//GEN-LAST:event_addStudentsHomeActionPerformed
+    }//GEN-LAST:event_homeMenuItemActionPerformed
+
+    private void logoutMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutMenuItemActionPerformed
+        // TODO add your handling code here:
+        setVisible(false);
+        login obj = new login();
+        obj.setVisible(true);
+    }//GEN-LAST:event_logoutMenuItemActionPerformed
 
     /**
      * @param args the command line arguments
@@ -327,11 +331,10 @@ public class addStudents extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addStudentBack;
-    private javax.swing.JMenuItem addStudentsHome;
-    private javax.swing.JMenuItem addStudentsLogout;
     private javax.swing.JTextField age;
     private javax.swing.JTextField city;
     private javax.swing.JTextField course;
+    private javax.swing.JMenuItem homeMenuItem;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -343,6 +346,7 @@ public class addStudents extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField2;
+    private javax.swing.JMenuItem logoutMenuItem;
     private javax.swing.JTextField mothersName;
     private javax.swing.JTextField name;
     private javax.swing.JTextField phoneNumber;

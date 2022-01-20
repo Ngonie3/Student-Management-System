@@ -8,7 +8,7 @@
  *
  * @author ngoni
  */
-
+import java.awt.event.KeyEvent;
 import java.sql.*;
 import javax.swing.JOptionPane;
 
@@ -17,11 +17,10 @@ public class admin extends javax.swing.JFrame {
     /**
      * Creates new form admin
      */
-    
-    Connection conn =  null;
+    Connection conn = null;
     Statement stmt = null;
     ResultSet rs = null;
-    
+
     public admin() {
         super("Admin");
         initComponents();
@@ -130,6 +129,11 @@ public class admin extends javax.swing.JFrame {
         adminID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 adminIDActionPerformed(evt);
+            }
+        });
+        adminID.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                adminIDKeyPressed(evt);
             }
         });
 
@@ -251,7 +255,7 @@ public class admin extends javax.swing.JFrame {
             String userName = adminUserName.getText();
             String adminPass = adminPassword.getText();
 
-            String sql = "UPDATE  ADMIN SET user_Name = '"+userName+"', password = '"+adminPass+"', admin_Name = '"+AdminName+"'WHERE ID = '"+ID+"'";
+            String sql = "UPDATE  ADMIN SET user_Name = '" + userName + "', password = '" + adminPass + "', admin_Name = '" + AdminName + "'WHERE ID = '" + ID + "'";
 
             stmt.executeUpdate(sql);
             JOptionPane.showMessageDialog(null, "Data is successfully saved");
@@ -260,21 +264,21 @@ public class admin extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, e);
         }
     }//GEN-LAST:event_adminUpdateActionPerformed
-    
-    private void clearAdmin(){
+
+    private void clearAdmin() {
         adminID.setText(null);
         adminName.setText(null);
         adminUserName.setText(null);
         adminPassword.setText(null);
     }
-    
-    private void clearAdminSettings(){
+
+    private void clearAdminSettings() {
         //adminID.setText(null);
         adminName.setText(null);
         adminUserName.setText(null);
         adminPassword.setText(null);
     }
-    
+
     private void adminBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminBackActionPerformed
         // TODO add your handling code here:
         setVisible(false);
@@ -286,17 +290,17 @@ public class admin extends javax.swing.JFrame {
         // TODO add your handling code here:
         try {
             stmt = conn.createStatement();
-            
+
             int ID = Integer.parseInt(adminID.getText());
-            
-            String sql = "SELECT * FROM ADMIN WHERE ID='"+ID+"'";
-            
+
+            String sql = "SELECT * FROM ADMIN WHERE ID='" + ID + "'";
+
             rs = stmt.executeQuery(sql);
-            if(rs.next()){
+            if (rs.next()) {
                 adminName.setText(rs.getString("admin_name"));
                 adminPassword.setText(rs.getString("password"));
                 adminUserName.setText(rs.getString("user_name"));
-            }else{
+            } else {
                 JOptionPane.showMessageDialog(null, "Record not found");
                 clearAdminSettings();
             }
@@ -313,17 +317,17 @@ public class admin extends javax.swing.JFrame {
         // TODO add your handling code here:
         try {
             stmt = conn.createStatement();
-            
+
             int ID = Integer.parseInt(adminID.getText());
-            
-            String sql = "DELETE FROM ADMIN WHERE ID = '"+ID+"'";
-            
+
+            String sql = "DELETE FROM ADMIN WHERE ID = '" + ID + "'";
+
             stmt.executeUpdate(sql);
-            
+
             setVisible(false);
             showAdmin obj = new showAdmin();
             obj.setVisible(true);
-            
+
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
         }
@@ -343,6 +347,32 @@ public class admin extends javax.swing.JFrame {
         obj.setVisible(true);
 
     }//GEN-LAST:event_logoutMenuItemActionPerformed
+
+    private void adminIDKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_adminIDKeyPressed
+        // TODO add your handling code here:
+
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            try {
+                stmt = conn.createStatement();
+
+                int ID = Integer.parseInt(adminID.getText());
+
+                String sql = "SELECT * FROM ADMIN WHERE ID='" + ID + "'";
+
+                rs = stmt.executeQuery(sql);
+                if (rs.next()) {
+                    adminName.setText(rs.getString("admin_name"));
+                    adminPassword.setText(rs.getString("password"));
+                    adminUserName.setText(rs.getString("user_name"));
+                } else {
+                    JOptionPane.showMessageDialog(null, "Record not found");
+                    clearAdminSettings();
+                }
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, e);
+            }
+        }
+    }//GEN-LAST:event_adminIDKeyPressed
 
     /**
      * @param args the command line arguments

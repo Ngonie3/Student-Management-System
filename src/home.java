@@ -253,6 +253,7 @@ public class home extends javax.swing.JFrame {
         // TODO add your handling code here:
         setVisible(false);
         login obj = new login();
+        obj.setLocationRelativeTo(null);
         obj.setVisible(true);
         
     }//GEN-LAST:event_logoutMenuItemActionPerformed
@@ -261,6 +262,7 @@ public class home extends javax.swing.JFrame {
         // TODO add your handling code here:
         setVisible(false);
         home obj = new home();
+        obj.setLocationRelativeTo(null);
         obj.setVisible(true);
     }//GEN-LAST:event_homeMenuItemActionPerformed
 
@@ -268,6 +270,7 @@ public class home extends javax.swing.JFrame {
         // TODO add your handling code here:
         setVisible(false);
         addStudents obj = new addStudents();
+        obj.setLocationRelativeTo(null);
         obj.setVisible(true);
                 
     }//GEN-LAST:event_addStudentsActionPerformed
@@ -276,6 +279,7 @@ public class home extends javax.swing.JFrame {
         // TODO add your handling code here:
         setVisible(false);
         showAdmin obj = new showAdmin();
+        obj.setLocationRelativeTo(null);
         obj.setVisible(true);
     }//GEN-LAST:event_showAdminsActionPerformed
 
@@ -283,6 +287,7 @@ public class home extends javax.swing.JFrame {
         // TODO add your handling code here:
         setVisible(false);
         admin obj = new admin();
+        obj.setLocationRelativeTo(null);
         obj.setVisible(true);
     }//GEN-LAST:event_adminSettingsActionPerformed
 
@@ -290,6 +295,7 @@ public class home extends javax.swing.JFrame {
         // TODO add your handling code here:
         setVisible(false);
         addAdmin obj = new addAdmin();
+        obj.setLocationRelativeTo(null);
         obj.setVisible(true);
     }//GEN-LAST:event_addAdminActionPerformed
 
@@ -297,6 +303,7 @@ public class home extends javax.swing.JFrame {
         // TODO add your handling code here:
         setVisible(false);
         showStudents obj = new showStudents();
+        obj.setLocationRelativeTo(null);
         obj.setVisible(true);
     }//GEN-LAST:event_showStudentsActionPerformed
 
@@ -304,6 +311,7 @@ public class home extends javax.swing.JFrame {
         // TODO add your handling code here:
         setVisible(false);
         Student obj = new Student();
+        obj.setLocationRelativeTo(null);
         obj.setVisible(true);
     }//GEN-LAST:event_studentSettingsActionPerformed
 
