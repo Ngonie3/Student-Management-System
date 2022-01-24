@@ -16,11 +16,10 @@ public class addStudents extends javax.swing.JFrame {
     /**
      * Creates new form addStudents
      */
-    
     Connection conn = null;
     Statement stmt = null;
     ResultSet rs = null;
-    
+
     public addStudents() {
         super("Add Students");
         initComponents();
@@ -243,28 +242,51 @@ public class addStudents extends javax.swing.JFrame {
 
     private void submitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitActionPerformed
         // TODO add your handling code here:
-        try {
-            stmt = conn.createStatement();
-            String studentName = name.getText();
-            String studentAge = age.getText();
-            String studentMother = mothersName.getText();
-            String studentCity = city.getText();
-            String studentPhone = phoneNumber.getText();
-            String studentCourse = course.getText(); 
-            
-            String sql = "INSERT INTO STUDENT (student_name, student_mothers_name, student_age, student_city, student_phone, student_course) VALUES('"+studentName+"', '"+studentMother+"', '"+studentAge+"', '"+studentCity+"', '"+studentPhone+"', '"+studentCourse+"')";
-            
-            stmt.executeUpdate(sql);
-            JOptionPane.showMessageDialog(null, "Data is sucessfully saved");
-            
-            clearStudent();
-            
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, e);
+
+        String studentName = name.getText();
+        String studentAge = age.getText();
+        String studentMother = mothersName.getText();
+        String studentCity = city.getText();
+        String studentPhone = phoneNumber.getText();
+        String studentCourse = course.getText();
+
+        if (name.getText().isEmpty()) {
+            String stdname = "Please enter the Student's name";
+            JOptionPane.showMessageDialog(null, stdname);
+        } else if (age.getText().isEmpty()) {
+            String stdage = "Please enter the Student's age";
+            JOptionPane.showMessageDialog(null, stdage);
+        } else if (mothersName.getText().isEmpty()) {
+            String stdmother = "Please enter the Mother's name";
+            JOptionPane.showMessageDialog(null, stdmother);
+        } else if (city.getText().isEmpty()) {
+            String stdcity = "Please enter the Student's City";
+            JOptionPane.showMessageDialog(null, stdcity);
+        } else if (phoneNumber.getText().isEmpty()) {
+            String stdphone = "Please enter the Student's Phone number";
+            JOptionPane.showMessageDialog(null, stdphone);
+        } else if (course.getText().isEmpty()) {
+            String stdcourse = "Please enter the Student's course";
+            JOptionPane.showMessageDialog(null, stdcourse);
+        } else {
+
+            try {
+                stmt = conn.createStatement();
+
+                String sql = "INSERT INTO STUDENT (student_name, student_mothers_name, student_age, student_city, student_phone, student_course) VALUES('" + studentName + "', '" + studentMother + "', '" + studentAge + "', '" + studentCity + "', '" + studentPhone + "', '" + studentCourse + "')";
+
+                stmt.executeUpdate(sql);
+                JOptionPane.showMessageDialog(null, "Data is sucessfully saved");
+
+                clearStudent();
+
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, e);
+            }
         }
     }//GEN-LAST:event_submitActionPerformed
-    
-    private void clearStudent(){
+
+    private void clearStudent() {
         name.setText(null);
         age.setText(null);
         mothersName.setText(null);
@@ -272,7 +294,7 @@ public class addStudents extends javax.swing.JFrame {
         phoneNumber.setText(null);
         course.setText(null);
     }
-    
+
     private void addStudentBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addStudentBackActionPerformed
         // TODO add your handling code here:
         setVisible(false);

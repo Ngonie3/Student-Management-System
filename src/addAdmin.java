@@ -4,11 +4,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author ngoni
  */
+import java.awt.event.KeyEvent;
 import java.sql.*;
 import javax.swing.JOptionPane;
 
@@ -17,15 +17,14 @@ public class addAdmin extends javax.swing.JFrame {
     /**
      * Creates new form addAdmin
      */
-    
     Connection conn = null;
     Statement stmt = null;
     ResultSet rs = null;
-    
+
     public addAdmin() {
         super("Add Admin");
         initComponents();
-        conn=dataBaseConnection.connection();
+        conn = dataBaseConnection.connection();
     }
 
     /**
@@ -44,7 +43,7 @@ public class addAdmin extends javax.swing.JFrame {
         adminName = new javax.swing.JTextField();
         adminUserName = new javax.swing.JTextField();
         adminPassword = new javax.swing.JPasswordField();
-        jButton1 = new javax.swing.JButton();
+        adminSubmit = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
@@ -75,14 +74,25 @@ public class addAdmin extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setBackground(new java.awt.Color(0, 0, 0));
-        jButton1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(0, 153, 204));
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/png files/submit.png"))); // NOI18N
-        jButton1.setText("Submit");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        adminPassword.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                adminPasswordKeyPressed(evt);
+            }
+        });
+
+        adminSubmit.setBackground(new java.awt.Color(0, 0, 0));
+        adminSubmit.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        adminSubmit.setForeground(new java.awt.Color(0, 153, 204));
+        adminSubmit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/png files/submit.png"))); // NOI18N
+        adminSubmit.setText("Submit");
+        adminSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                adminSubmitActionPerformed(evt);
+            }
+        });
+        adminSubmit.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                adminSubmitKeyPressed(evt);
             }
         });
 
@@ -112,7 +122,7 @@ public class addAdmin extends javax.swing.JFrame {
                     .addComponent(adminPassword)
                     .addComponent(adminUserName)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton1)
+                        .addComponent(adminSubmit)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButton2)
                         .addGap(0, 0, Short.MAX_VALUE))
@@ -136,7 +146,7 @@ public class addAdmin extends javax.swing.JFrame {
                     .addComponent(adminPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
+                    .addComponent(adminSubmit)
                     .addComponent(jButton2))
                 .addContainerGap(32, Short.MAX_VALUE))
         );
@@ -188,31 +198,45 @@ public class addAdmin extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_adminNameActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void adminSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminSubmitActionPerformed
         // TODO add your handling code here:
-        try {
-           stmt = conn.createStatement();
-           
-           String AdminName = adminName.getText();
-           String userName = adminUserName.getText();
-           String adminPass = adminPassword.getText();
-           
-           String sql = "INSERT INTO ADMIN (user_Name, password, admin_Name) values ('"+userName+"', '"+adminPass+"', '"+AdminName+"')";
-           
-           stmt.executeUpdate(sql);
-           JOptionPane.showMessageDialog(null, "Data is successfully saved");
-           clearAdmin();
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, e);
+
+        String AdminName = adminName.getText();
+        String userName = adminUserName.getText();
+        String adminPass = adminPassword.getText();
+
+        if (adminName.getText().isEmpty()) {
+            String admin_name = "Please enter the Admin Name";
+            JOptionPane.showMessageDialog(null, admin_name);
+        } else if (adminUserName.getText().isEmpty()) {
+            String admin_user_name = "Please enter the Username";
+            JOptionPane.showMessageDialog(null, userName);
+        } else if (adminPassword.getText().isEmpty()) {
+            String admin_pass = "Pleae enter the password";
+            JOptionPane.showMessageDialog(null, admin_pass);
+        } else {
+
+            try {
+                stmt = conn.createStatement();
+
+                String sql = "INSERT INTO ADMIN (user_Name, password, admin_Name) values ('" + userName + "', '" + adminPass + "', '" + AdminName + "')";
+
+                stmt.executeUpdate(sql);
+                JOptionPane.showMessageDialog(null, "Data is successfully saved");
+
+                clearAdmin();
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, e);
+            }
         }
-    }//GEN-LAST:event_jButton1ActionPerformed
-    
-    private void clearAdmin(){
+    }//GEN-LAST:event_adminSubmitActionPerformed
+
+    private void clearAdmin() {
         adminName.setText(null);
         adminUserName.setText(null);
         adminPassword.setText(null);
     }
-    
+
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         setVisible(false);
@@ -234,6 +258,46 @@ public class addAdmin extends javax.swing.JFrame {
         obj.setVisible(true);
 
     }//GEN-LAST:event_logoutMenuItemActionPerformed
+
+    //TO BE IGNNORED!!!!!
+    private void adminSubmitKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_adminSubmitKeyPressed
+        // TODO add your handling code here:  
+    }//GEN-LAST:event_adminSubmitKeyPressed
+    
+    
+    private void adminPasswordKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_adminPasswordKeyPressed
+        // TODO add your handling code here:
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            String AdminName = adminName.getText();
+            String userName = adminUserName.getText();
+            String adminPass = adminPassword.getText();
+
+            if (adminName.getText().isEmpty()) {
+                String admin_name = "Please enter the Admin Name";
+                JOptionPane.showMessageDialog(null, admin_name);
+            } else if (adminUserName.getText().isEmpty()) {
+                String admin_UName = "Please enter the Username";
+                JOptionPane.showMessageDialog(null, admin_UName);
+            } else if (adminPassword.getText().isEmpty()) {
+                String admin_pass = "Please enter the password";
+                JOptionPane.showMessageDialog(null, admin_pass);
+            } else {
+
+                try {
+                    stmt = conn.createStatement();
+
+                    String sql = "INSERT INTO ADMIN (user_Name, password, admin_Name) values ('" + userName + "', '" + adminPass + "', '" + AdminName + "')";
+
+                    stmt.executeUpdate(sql);
+                    JOptionPane.showMessageDialog(null, "Data is successfully saved");
+                        
+                    clearAdmin();
+                } catch (Exception e) {
+                    JOptionPane.showMessageDialog(null, e);
+                }
+            }
+        }
+    }//GEN-LAST:event_adminPasswordKeyPressed
 
     /**
      * @param args the command line arguments
@@ -273,9 +337,9 @@ public class addAdmin extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField adminName;
     private javax.swing.JPasswordField adminPassword;
+    private javax.swing.JButton adminSubmit;
     private javax.swing.JTextField adminUserName;
     private javax.swing.JMenuItem homeMenuItem;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
