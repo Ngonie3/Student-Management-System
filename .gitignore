@@ -1,0 +1,49 @@
+#Compiled class file
+*.class
+
+#Log file
+*.log
+
+#BlueJ files
+*.ctxt
+
+#Package files
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+#Windows thumbnail cache files
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+
+#Dump file
+*.stackdump
+
+#Folder config file
+[Dd]esktop.ini
+
+#Windows Installer files
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+
+#Windows shortcuts
+*.lnk
+
+#Netbeans IDE 
+**/nbproject/private/
+**/nbproject/Makefile-*.mk
+**/nbproject/Package-*.bash
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
