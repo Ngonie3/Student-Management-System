@@ -194,13 +194,13 @@ public class addAdmin extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    //TO BE IGNNORED!!!!!
     private void adminNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminNameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_adminNameActionPerformed
 
     private void adminSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminSubmitActionPerformed
-        // TODO add your handling code here:
-
+        
         String AdminName = adminName.getText();
         String userName = adminUserName.getText();
         String adminPass = adminPassword.getText();
@@ -238,21 +238,21 @@ public class addAdmin extends javax.swing.JFrame {
     }
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        
         setVisible(false);
         home obj = new home();
         obj.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void homeMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeMenuItemActionPerformed
-        // TODO add your handling code here:
+        
         setVisible(false);
         home obj = new home();
         obj.setVisible(true);
     }//GEN-LAST:event_homeMenuItemActionPerformed
 
     private void logoutMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutMenuItemActionPerformed
-        // TODO add your handling code here:
+        
         setVisible(false);
         login obj = new login();
         obj.setVisible(true);
@@ -261,12 +261,12 @@ public class addAdmin extends javax.swing.JFrame {
 
     //TO BE IGNNORED!!!!!
     private void adminSubmitKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_adminSubmitKeyPressed
-        // TODO add your handling code here:  
+         
     }//GEN-LAST:event_adminSubmitKeyPressed
     
     
     private void adminPasswordKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_adminPasswordKeyPressed
-        // TODO add your handling code here:
+        
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             String AdminName = adminName.getText();
             String userName = adminUserName.getText();

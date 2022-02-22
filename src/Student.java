@@ -298,14 +298,14 @@ public class Student extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void homeMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeMenuItemActionPerformed
-        // TODO add your handling code here:
+        
         setVisible(false);
         home obj = new home();
         obj.setVisible(true);
     }//GEN-LAST:event_homeMenuItemActionPerformed
 
     private void logoutMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutMenuItemActionPerformed
-        // TODO add your handling code here:
+        
         setVisible(false);
         login obj = new login();
         obj.setVisible(true);
@@ -313,11 +313,11 @@ public class Student extends javax.swing.JFrame {
     }//GEN-LAST:event_logoutMenuItemActionPerformed
 
     private void nameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_nameActionPerformed
 
     private void updateStudentsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateStudentsActionPerformed
-        // TODO add your handling code here:
+        
         try {
             stmt = conn.createStatement();
             int studentId = Integer.parseInt(id.getText());
@@ -351,7 +351,6 @@ public class Student extends javax.swing.JFrame {
     }
 
     private void clearStudentSettings() {
-        //id.setText(null);
         name.setText(null);
         age.setText(null);
         mothersName.setText(null);
@@ -361,14 +360,14 @@ public class Student extends javax.swing.JFrame {
     }
 
     private void addStudentBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addStudentBackActionPerformed
-        // TODO add your handling code here:
+        
         setVisible(false);
         home obj = new home();
         obj.setVisible(true);
     }//GEN-LAST:event_addStudentBackActionPerformed
 
     private void studentsSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_studentsSearchActionPerformed
-        // TODO add your handling code here:
+        
         try {
             stmt = conn.createStatement();
 
@@ -396,7 +395,7 @@ public class Student extends javax.swing.JFrame {
     }//GEN-LAST:event_studentsSearchActionPerformed
 
     private void studentsDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_studentsDeleteActionPerformed
-        // TODO add your handling code here:
+
         try {
             stmt = conn.createStatement();
             int studentId = Integer.parseInt(id.getText());
@@ -413,7 +412,7 @@ public class Student extends javax.swing.JFrame {
     }//GEN-LAST:event_studentsDeleteActionPerformed
 
     private void idKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_idKeyPressed
-        // TODO add your handling code here:
+       
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             try {
                 stmt = conn.createStatement();
@@ -443,7 +442,6 @@ public class Student extends javax.swing.JFrame {
     }//GEN-LAST:event_idKeyPressed
 
     private void studentClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_studentClearActionPerformed
-        // TODO add your handling code here:
         
         id.setText(null);
         name.setText(null);

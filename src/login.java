@@ -13,7 +13,6 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.sql.*;
 import javax.swing.JOptionPane;
-import javax.swing.Timer;
 
 public class login extends javax.swing.JFrame {
 
@@ -168,13 +167,11 @@ public class login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void cancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelActionPerformed
-        // TODO add your handling code here:
         System.exit(0);
     }//GEN-LAST:event_cancelActionPerformed
 
     private void loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginActionPerformed
 
-        // TODO add your handling code here:
         try {
             stmt = conn.createStatement();
             String userName = nameField.getText();
@@ -198,25 +195,27 @@ public class login extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, e);
         }
     }//GEN-LAST:event_loginActionPerformed
-
+    
+    //TO BE IGNNORED!!!!!
     private void nameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameFieldActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_nameFieldActionPerformed
-
+    
+    //TO BE IGNNORED!!!!!
     private void loginKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_loginKeyPressed
-        // TODO add your handling code here:
+       
     }//GEN-LAST:event_loginKeyPressed
 
     private void passwordFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_passwordFieldKeyPressed
-        // TODO add your handling code here:
+        
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             try {
-                ActionListener listen = new ActionListener() {
+                /*ActionListener listen = new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
-                        //To change body of generated methods, choose Tools | Templates.
+                        
                     }
-                };
+                };*/
 
                 stmt = conn.createStatement();
                 String userName = nameField.getText();
@@ -231,7 +230,6 @@ public class login extends javax.swing.JFrame {
                     obj.setVisible(true);
                 } else {
 
-                    //JOptionPane.showMessageDialog(null,"username or password is incorrect");
                     shakingFrame s = new shakingFrame(this);
                     s.startShake();
                 }
@@ -242,8 +240,9 @@ public class login extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_passwordFieldKeyPressed
 
+    //TO BE IGNNORED!!!!!
     private void passwordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordFieldActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_passwordFieldActionPerformed
 
     /**

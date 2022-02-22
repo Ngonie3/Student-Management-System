@@ -252,12 +252,13 @@ public class admin extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    //TO BE IGNNORED!!!!!
     private void adminNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminNameActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_adminNameActionPerformed
 
     private void adminUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminUpdateActionPerformed
-        // TODO add your handling code here:
+        
         try {
             stmt = conn.createStatement();
             int ID = Integer.parseInt(adminID.getText());
@@ -282,22 +283,21 @@ public class admin extends javax.swing.JFrame {
         adminPassword.setText(null);
     }
 
-    private void clearAdminSettings() {
-        //adminID.setText(null);
+    private void clearAdminSettings() { 
         adminName.setText(null);
         adminUserName.setText(null);
         adminPassword.setText(null);
     }
 
     private void adminBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminBackActionPerformed
-        // TODO add your handling code here:
+        
         setVisible(false);
         home obj = new home();
         obj.setVisible(true);
     }//GEN-LAST:event_adminBackActionPerformed
 
     private void adminSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminSearchActionPerformed
-        // TODO add your handling code here:
+        
         try {
             stmt = conn.createStatement();
 
@@ -319,12 +319,13 @@ public class admin extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_adminSearchActionPerformed
 
+    //TO BE IGNNORED!!!!!
     private void adminIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminIDActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_adminIDActionPerformed
 
     private void adminDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminDeleteActionPerformed
-        // TODO add your handling code here:
+        
         try {
             stmt = conn.createStatement();
 
@@ -344,14 +345,14 @@ public class admin extends javax.swing.JFrame {
     }//GEN-LAST:event_adminDeleteActionPerformed
 
     private void homeMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeMenuItemActionPerformed
-        // TODO add your handling code here:
+        
         setVisible(false);
         home obj = new home();
         obj.setVisible(true);
     }//GEN-LAST:event_homeMenuItemActionPerformed
 
     private void logoutMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutMenuItemActionPerformed
-        // TODO add your handling code here:
+        
         setVisible(false);
         login obj = new login();
         obj.setVisible(true);
@@ -359,8 +360,7 @@ public class admin extends javax.swing.JFrame {
     }//GEN-LAST:event_logoutMenuItemActionPerformed
 
     private void adminIDKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_adminIDKeyPressed
-        // TODO add your handling code here:
-
+        
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             try {
                 stmt = conn.createStatement();
@@ -385,7 +385,6 @@ public class admin extends javax.swing.JFrame {
     }//GEN-LAST:event_adminIDKeyPressed
 
     private void adminClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminClearActionPerformed
-        // TODO add your handling code here:
         
         adminID.setText(null);
         adminName.setText(null);

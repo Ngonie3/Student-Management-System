@@ -236,13 +236,13 @@ public class addStudents extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    //TO BE IGNNORED!!!!!
     private void nameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_nameActionPerformed
 
     private void submitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitActionPerformed
-        // TODO add your handling code here:
-
+        
         String studentName = name.getText();
         String studentAge = age.getText();
         String studentMother = mothersName.getText();
@@ -296,21 +296,21 @@ public class addStudents extends javax.swing.JFrame {
     }
 
     private void addStudentBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addStudentBackActionPerformed
-        // TODO add your handling code here:
+        
         setVisible(false);
         home obj = new home();
         obj.setVisible(true);
     }//GEN-LAST:event_addStudentBackActionPerformed
 
     private void homeMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeMenuItemActionPerformed
-        // TODO add your handling code here:
+        
         setVisible(false);
         home obj = new home();
         obj.setVisible(true);
     }//GEN-LAST:event_homeMenuItemActionPerformed
 
     private void logoutMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutMenuItemActionPerformed
-        // TODO add your handling code here:
+        
         setVisible(false);
         login obj = new login();
         obj.setVisible(true);

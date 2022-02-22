@@ -250,7 +250,7 @@ public class home extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void logoutMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutMenuItemActionPerformed
-        // TODO add your handling code here:
+        
         setVisible(false);
         login obj = new login();
         obj.setLocationRelativeTo(null);
@@ -259,7 +259,7 @@ public class home extends javax.swing.JFrame {
     }//GEN-LAST:event_logoutMenuItemActionPerformed
 
     private void homeMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeMenuItemActionPerformed
-        // TODO add your handling code here:
+        
         setVisible(false);
         home obj = new home();
         obj.setLocationRelativeTo(null);
@@ -267,7 +267,7 @@ public class home extends javax.swing.JFrame {
     }//GEN-LAST:event_homeMenuItemActionPerformed
 
     private void addStudentsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addStudentsActionPerformed
-        // TODO add your handling code here:
+        
         setVisible(false);
         addStudents obj = new addStudents();
         obj.setLocationRelativeTo(null);
@@ -276,7 +276,7 @@ public class home extends javax.swing.JFrame {
     }//GEN-LAST:event_addStudentsActionPerformed
 
     private void showAdminsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showAdminsActionPerformed
-        // TODO add your handling code here:
+        
         setVisible(false);
         showAdmin obj = new showAdmin();
         obj.setLocationRelativeTo(null);
@@ -284,7 +284,7 @@ public class home extends javax.swing.JFrame {
     }//GEN-LAST:event_showAdminsActionPerformed
 
     private void adminSettingsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminSettingsActionPerformed
-        // TODO add your handling code here:
+        
         setVisible(false);
         admin obj = new admin();
         obj.setLocationRelativeTo(null);
@@ -292,7 +292,7 @@ public class home extends javax.swing.JFrame {
     }//GEN-LAST:event_adminSettingsActionPerformed
 
     private void addAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addAdminActionPerformed
-        // TODO add your handling code here:
+        
         setVisible(false);
         addAdmin obj = new addAdmin();
         obj.setLocationRelativeTo(null);
@@ -300,7 +300,7 @@ public class home extends javax.swing.JFrame {
     }//GEN-LAST:event_addAdminActionPerformed
 
     private void showStudentsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showStudentsActionPerformed
-        // TODO add your handling code here:
+       
         setVisible(false);
         showStudents obj = new showStudents();
         obj.setLocationRelativeTo(null);
@@ -308,7 +308,7 @@ public class home extends javax.swing.JFrame {
     }//GEN-LAST:event_showStudentsActionPerformed
 
     private void studentSettingsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_studentSettingsActionPerformed
-        // TODO add your handling code here:
+        
         setVisible(false);
         Student obj = new Student();
         obj.setLocationRelativeTo(null);
